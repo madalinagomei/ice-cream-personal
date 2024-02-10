@@ -1,0 +1,266 @@
+.reviews{
+    margin-bottom: 60px;
+
+    &__inner{
+        position: relative;
+    }
+
+    &__img{
+    width: 84px;
+    @include centered;
+    margin-bottom: 32px;
+    }
+
+    &__text-inner{
+    position: relative;
+    max-width: 280px;
+    height: 308px;
+    background-color: #FAFAFA;
+
+    @include mq(tablet-only) {
+                max-width: 620px;
+                margin: 0 auto;
+                height: 164px;
+                background-color: #fafafa70;
+            }
+
+    @include mq(desktop){
+                max-width: 968px;
+                margin: 0 auto;
+                height: 138px;
+                background-color: #FAFAFA;
+    }
+}
+
+    &__text{
+        position: relative;
+        z-index: 10;
+        padding-top: 40px;
+        font-family: 'DM Sans';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2.4;
+        @include centered;
+        max-width: 157px;
+        height: 306px;
+        text-align: center;
+
+        @include mq(tablet-only) {
+                max-width: 514px;
+                height: 108px;
+
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 2.1;
+                text-align: center;
+                letter-spacing: 0.04em;
+            }
+
+        @include mq(desktop){
+                max-width: 750px;
+                height: 52px;
+
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.8;
+                text-align: center;
+                letter-spacing: 0.04em;
+        }
+    }
+
+     &__location::before{
+        content: " ";
+        position: absolute;
+        top: 20%;
+        left:50%;
+        margin-bottom: 16px;
+        background-image: url(../images/reviews/markers.svg);
+        width: 34px;
+        height: 4px;
+        background-repeat: no-repeat;
+        transform: translateX(-50%);
+    }
+
+    &__backg-img{
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        transform: translate(-50%, -78%);
+
+        width: 180px;
+        height: 250px;
+        @include centered;
+        
+        background-image: repeating-linear-gradient( to bottom,
+    transparent,
+    transparent 26px,
+    #E1E1E1 28px,);
+
+        @include mq(tablet-only) {
+                position: absolute;
+                top: 79%;
+                left: 50%;
+                transform: translate(-50%, -80%);
+
+                width: 600px;
+                height: 108px;
+                
+                background-image: repeating-linear-gradient( 
+            to bottom,
+            transparent,
+            transparent 26px,
+          #E1E1E1 29px,);
+            }
+
+         @include mq(desktop){
+              position: absolute;
+                top: 73%;
+                left: 50%;
+                transform: translate(-50%, -79%);
+
+                width: 822px;
+                height: 75px;
+                
+                background-image: repeating-linear-gradient( 
+            to bottom,
+            transparent,
+            transparent 26px,
+          #E1E1E1 29px,);
+         }
+    }
+
+    &__backg-img::before{
+        content: ' ';
+        position: absolute;
+        top: -16px;
+        left: -3px;
+
+        background-image: url(../images/reviews/quotes.svg);
+        background-repeat: no-repeat;
+
+        width: 54px;
+        height: 40px;
+    }
+
+    &__location{
+        position: relative;
+    
+        padding-top: 36px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.9;
+
+        @include mq(tablet-only){
+            padding-top: 24px;
+
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        @include mq(desktop){
+            padding-top: 36px;
+            font-size: 20px;
+        }
+    }
+}
+
+.review__inner:not(:last-child){
+    margin-bottom: 60px;
+}
+
+
+.reviews__slider .slick-arrow{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+}
+
+.slick-dot{
+    position: relative;
+}
+
+.slick-dots button{
+    display: flex;
+    
+    font-size: 0;
+    padding: 0;
+    border: none;
+    background-color: #D9D9D9;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 250ms;
+
+}
+
+.reviews__slider .slick-dots{
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(tablet-only){
+            bottom: 5%;
+        }
+
+    @include mq(desktop){
+        bottom: 5%;
+    }
+
+}
+
+.slick-dots li + li{
+    padding-left: 10px;
+
+    @include mq(tablet-only){
+        padding-left: 18px;
+    }
+
+    @include mq(desktop){
+        padding-left: 18px;
+    }
+}
+
+.slick-dots li.slick-active button {
+            border: 4px solid #D31342;
+		}
+
+.slick-dots li:not(:first-child) button:hover,
+.slick-dots li:not(:first-child) button:focus {
+            border: 4px solid #D31342;
+		}
+
+.slick-dots li:nth-child(1).slick-active button{
+    border: none;
+}
+
+.slick-dots li:nth-child(1) button::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/reviews/slider-btn-2.svg);
+}
+
+.slick-dots li:nth-child(1).slick-active button::after{
+    background-image: url(../images/reviews/slider-btn.svg);
+}
+
+.slick-dots li:nth-child(1):hover button::after{
+    background-image: url(../images/reviews/slider-btn.svg);
+}
+
+.slick-dots li:nth-child(1) button{
+    background-color: transparent;
+}
+
+

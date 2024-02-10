@@ -1,0 +1,380 @@
+.local {
+    width: 100%;
+    height: 95%;
+  }
+  
+  .contacts-location {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    overflow-y: scroll;
+    background-color: rgba(231, 226, 203, 0.404);
+  }
+  
+  .modal-is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .location-map {
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    padding: 10px 10px;
+  
+    background: linear-gradient(-180deg, #e73570 0%, #FFEBE6 100%);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform 250ms;
+
+    @media screen and (min-width: 480px) {
+     height: 80vh;
+      width: 450px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 85vw;
+      height: 95vh;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 85vw;
+      height: 95vh;
+    } 
+  }
+  .location-form {
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    height: 95%;
+    @media screen and (min-width: 480px) {
+      width: 95%;
+      padding: 5px 5px;
+    }
+  }
+  
+  .contacts-location-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 3px 3px;
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #f5a8c2;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    fill: #fff;
+    transition-duration: 400ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:hover,
+    &:focus {
+      background-color:#e73f77;
+      border: 1px solid var(--bgc-products_second-color);
+      border-radius: 50%;
+      fill: #FFFFFF;
+    }
+  }
+ 
+  
+  .location-form__title {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Titan One', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    @media screen and (min-width: 768px){
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 30px;
+    }
+  }
+
+
+  // Стилізація вкладки ФРАНЧАЙЗИНГ
+.contacts-franchise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  overflow-y: scroll;
+  background-color: rgba(255, 248, 220, 0.4);
+  transition: opacity 250ms var(--transition-timing),
+    visibility 250ms var(--transition-timing);
+  &.modal-is-hidden .contacts-franchise-modal {
+    transform: scale(2) translate(0);
+  }
+}
+
+.franchise-modal {
+  position: absolute;
+  display: inline-block;
+  width: 90vw;
+  min-height: 500px;
+  top: 50%;
+  left: 50%;
+  padding: 20px 20px;
+  background: linear-gradient(-180deg, #F3CDC3 0%, #FFEBE6 100%);
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms;
+  background-image: url(../images/modal-windows/ice-green.jpg);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  @media screen and (min-width: 320px) {
+    width: 95vw;
+    min-height: 500px;
+  }
+  @media screen and (min-width: 480px) {
+    width: 440px;
+    min-height: 500px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 700px;
+    min-height: 609px;
+    animation: background 5000ms linear 2s infinite alternate;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1000px;
+    height: 630px;
+  }
+}
+
+.contacts-franchise-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 3px 3px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #F3CDC3;
+  border: 1px solid var(--red-text-color);
+  border-radius: 50%;
+  fill: #fff;
+  transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+    border: 1px solid var(--bgc-products_second-color);
+    border-radius: 50%;
+    fill: #FFFFFF;
+  }
+}
+
+.franchise-form__title {
+  padding-top: 40px;
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.13;
+  letter-spacing: 0.06em;
+
+  text-align: center;
+  // text-transform: uppercase;
+  color: var(--red-text-color);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+
+.franchise-form-field {
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 11px 12px 11px 42px;
+    outline: none;
+    border: 1px solid var(--bgc_second-btn-color);
+    border-radius: 4px;
+    background-color: #f8dce3;
+  }
+}
+
+.franchise-form-field {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.franchise-form-field__lable {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: var(--bgc_second-btn-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  
+  @media screen and (min-width: 768px) {
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+}
+.franchise-form-field__align-icon {
+  position: relative;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+.franchise-form-field__icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--red-text-color);
+  //    .franchise-form__input:focus + &,
+  //    .franchise-form__input:hover + & {
+  //   fill: green;
+  // }
+}
+
+.franchise-form-field__input {
+  &:hover {
+    border: 1px solid rgb(119, 19, 119);
+  }
+   &:focus  {
+    border: 1px solid green;
+  }
+}
+
+
+.franchise-form__button {
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+
+  font-style: 'Titan One', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--bgc_second-btn-color);
+
+  @media screen and (min-width: 768px) {
+    height: 30px;
+  }
+  background-color: var(--white-text-color);
+  border-radius: 50px;
+  border: 1px solid var(--red-text-color);
+  border-color: inherit;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing);
+  &:focus,
+  &:hover {
+    background-color: var(--red-text-color);
+    color: var(--white-text-color);
+  }
+}
+.franchise-checkbox__input {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+.franchise-checkbox__icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 8px;
+  border: 2px solid var(--bgc_second-btn-color);
+  border-radius: 2px;
+  .franchise-checkbox__input:checked + & {
+    background-color: var(--bgc_second-btn-color);
+    background-size: contain;
+    background-origin: border-box;
+    border: var(--bgc_second-btn-color);
+    border-radius: 2px;
+    background-position: center;
+    background-image: url('/src/images/modal-windows/bird.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+
+.franchise-checkbox__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+  color: var(--red-text-color);
+
+  @media screen and (min-width: 768px) {
+    color: var(--red-text-color);
+  }
+}
+.franchise-checkbox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+
+  font-style: normal;
+  text-decoration-skip-ink: none;
+  color: var(--red-text-color);
+  &:focus {
+    background-color: var(--bgc_second-btn-color);
+
+    background-size: contain;
+    background-origin: border-box;
+    border: var(--red-text-color);
+    border-radius: 2px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}

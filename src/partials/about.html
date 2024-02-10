@@ -1,0 +1,63 @@
+
+<section class="about">
+  <div class="container"> 
+    <div class="about-name"> 
+      <p id="about" class="about-name__pre-text">tradition and love</p>
+      <h2 id="how_it's_made?" class="about-name__title">how it’s made?</h2>
+    </div>
+    <div class="about-wrap"> 
+      <div class="about-wrap__flex">
+        <picture>
+          <!--Набор изображений для десктопных екранов-->
+          <source media="(min-width: 1200px)" 
+          srcset="./images/about/cow_desktop.png 1x,
+                  ./images/about/cow_desktop-2x.png 2x" 
+          type="image/jpg">
+          <!--Набор изображений для планшетных екранов-->
+          <source media="(min-width: 768px)" 
+          srcset="./images/about/cow_tablet.png 1x,
+                  ./images/about/cow_tablet-2x.png 2x" 
+          type="image/jpg"> 
+          <!--Набор изображений для мобильных екранов-->
+          <source media="(max-width: 767px)" 
+          srcset="./images/about/cow_mobile.png 1x,
+                  ./images/about/cow_mobile-2x.png 2x"  
+          type="image/png">
+          <!--Дефолтное изображение-->
+          <img class="about-wrap__pic" 
+          src="./images/about/cow_mobile.png"   
+          alt="cow" 
+          width="280"
+          height="279">
+        </picture>
+  
+        </div>
+      <div class="about-wrap-content"> 
+        <p class="about-wrap-content__text">
+          We treat the production of our ice cream with great love and excitement, 
+          which is why we make it exclusively from natural selected milk. 
+        </p>
+        <p class="about-wrap-content__secondary-text"> 
+          Our cows give delicious milk. The best conditions have been created for them:
+          pastures in the fresh air with juicy grass and healthy feed, 
+          care and regular medical examinations.
+          Everything is only the best, so that you can later enjoy not only a tasty, 
+          but also a healthy product.
+        </p>
+        <p class="about-wrap-content__paragraph">
+          Click to Read more to find out how the ice cream production process works.
+        </p> 
+        <button type="button" class="about-wrap-content__btn" data-modal-open-about>
+          Read more
+          <img 
+            class="about-wrap__btn-icon" 
+            src="./images/about/about-btn-icon.svg"   
+            alt="btn_icon" 
+            width="8" 
+            height="10"   
+          />  
+        </button>   
+      </div>
+    </div>
+  </div>
+</section>
