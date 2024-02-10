@@ -15,7 +15,7 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/ice-cream-personal/issues"
+    "url": "https://github.com/madalinagomei/ice-cream-personal/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
