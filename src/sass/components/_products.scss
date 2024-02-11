@@ -10,16 +10,30 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--cream-text-color);
+&:hover{
+  transform: scale(2);
+cursor:pointer;
+}
+
+
   @include mq(tablet) {
     font-size: 26px;
     line-height: 1.15;
     margin-bottom: 18px;
+    &:hover {
+        transform: scale(2);
+        cursor: pointer;
+      }
   }
   @include mq(desktop) {
     font-size: 30px;
     line-height: 1.13;
     letter-spacing: 0.04em;
     margin-bottom: 16px;
+    &:hover {
+        transform: scale(2);
+        cursor: pointer;
+      }
   }
 }
 .products-title {
@@ -32,15 +46,27 @@
   text-transform: uppercase;
   color: var(--red-text-color);
   margin-bottom: 148px;
+  &:hover {
+      transform: scale(2);
+      cursor: pointer;
+    }
   @include mq(tablet) {
     font-size: 48px;
     margin-bottom: 158px;
+    &:hover {
+        transform: scale(2);
+        cursor: pointer;
+      }
   }
   @include mq(desktop) {
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
     margin-bottom: 281px;
+    &:hover {
+        transform: scale(2);
+        cursor: pointer;
+      }
   }
 }
 .products-card {
@@ -57,18 +83,34 @@
   flex-direction: column;
   border-radius: 24px;
   padding: 160px 39px 40px 41px;
+
   @include mq(mobile-only) {
     &:not(:last-child) {
       margin-bottom: 140px;
+      &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+          box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
+        }
     }
   }
   @include mq(tablet) {
     padding: 118px 32px 40px 32px;
     flex-basis: calc((100% - 32px) / 3);
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
+      }
   }
   @include mq(desktop) {
     padding: 165px 63px 60px 64px;
     flex-basis: calc((100% - 64px) / 3);
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
+      }
   }
 }
 .products-card__item--icecream {
