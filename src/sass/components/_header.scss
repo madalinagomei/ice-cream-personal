@@ -94,6 +94,7 @@
     color: var(--white-text-color);
     background-color: var(--red-text-color);
     background-image: url('../images/hero/arrow.svg');
+      scale: 1.1;
   }
   @include mq(mobile-only) {
     display: none;
@@ -126,6 +127,9 @@
 
   .header__nav-item-desktop:not(:last-child){
     margin-right: 35px;
+  }
+ .header__nav-item-desktop:hover{
+    scale: 1.2;
   }
 
   .header__nav-list-desktop{

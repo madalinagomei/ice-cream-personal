@@ -4,7 +4,6 @@
   @include mq(mobile-only) {
     background-image: url('../images/hero/ellipse-tablet.svg');
     background-repeat: no-repeat;
-    animation: bgh 1000ms linear 1 forwards;
     @keyframes bgh {
       0% {
         background-image: url('../images/hero/ellipse-tablet.svg');
@@ -26,7 +25,6 @@
 
     background-position: top 92px left 117px;
     background-repeat: no-repeat;
-    animation: bgm 1000ms linear 1 forwards;
     @keyframes bgm {
       0% {
         background-image: url('../images/hero/icecrem.svg');
@@ -50,7 +48,6 @@
       background-repeat: no-repeat;
       background-position: bottom left -300px, bottom 16px left 32px,
         bottom 1px right 32px, left 248px bottom 40px;
-      animation: bgt 2000ms linear 1 forwards;
       @keyframes bgt {
         0% {
           background-image: url('../images/hero/ice-cream-tablet.svg'),
@@ -84,7 +81,6 @@
       background-repeat: no-repeat;
       background-position: right 328px bottom 0px, bottom 60px left 16px,
         bottom 1px right 16px, right 149px bottom 76px;
-      animation: bgd 2000ms linear 1 forwards;
       @keyframes bgd {
         0% {
           background-image: url('../images/hero/ice-cream-desktop.svg'),
@@ -276,7 +272,6 @@
 
   .hero__content-item-circle {
     position: absolute;
-    animation: CircleMove 1500ms linear 1 forwards;
     @include mq(tablet-only) {
       left: 25px;
       width: 20px;
@@ -287,19 +282,7 @@
       width: 30px;
       height: 30px;
     }
-    @keyframes CircleMove {
-      0% {
-        left: 125px;
-      }
-      100% {
-        @include mq(tablet-only) {
-          left: 25px;
-        }
-        @include mq(desktop) {
-          left: 40px;
-        }
-      }
-    }
+
 
     border-radius: 50%;
     box-sizing: border-box;
@@ -314,31 +297,15 @@
     height: 150%;
     border-radius: 50%;
     @include mq(tablet-only) {
-      background: repeating-linear-gradient(
-        white 0%,
-        white 5px,
-        var(--cream-text-color) 5px,
-        var(--cream-text-color) 10px,
-        white 10px,
-        white 15px,
-        var(--cream-text-color) 15px,
-        var(--cream-text-color) 20px
-      );
+      background: var(--white-text-color);
+
     }
     @include mq(desktop) {
-      background: repeating-linear-gradient(
-        white 0%,
-        white 7.5px,
-        var(--cream-text-color) 7.5px,
-        var(--cream-text-color) 15px,
-        white 15px,
-        white 22.5px,
-        var(--cream-text-color) 22.5px,
-        var(--cream-text-color) 30px
-      );
+      background: var(--white-text-color)
+
     }
     transform: translateX(-20%) translateY(-20%) rotate(-45deg);
-    animation: animate 20s linear infinite;
+
   }
 
   @keyframes animate {
@@ -349,5 +316,90 @@
     to {
       background-position: 0 450px;
     }
+  }
+}
+
+// bubble  effect
+
+
+
+$bubble-count: 50;
+$sway-type: "sway-left-to-right", "sway-right-to-left";
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+@function sample($list) {
+  @return nth($list, random(length($list)));
+}
+// fix!!
+.bubbles {
+  position: relative;
+  width: 1200px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: inherit;
+    animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+  }
+
+  @for $i from 0 through $bubble-count {
+    &:nth-child(#{$i}) {
+      --bubble-left-offset: #{random_range(0vw, 100vw)};
+      --bubble-radius: #{random_range(1vw, 10vw)};
+      --bubble-float-duration: #{random_range(6s, 12s)};
+      --bubble-sway-duration: #{random_range(4s, 6s)};
+      --bubble-float-delay: #{random_range(0s, 4s)};
+      --bubble-sway-delay: #{random_range(0s, 4s)};
+      --bubble-sway-type: #{sample($sway-type)};
+    }
+  }
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-175vh);
+  }
+}
+
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
   }
 }
