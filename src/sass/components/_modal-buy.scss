@@ -13,13 +13,16 @@
     transition: opacity 250ms var(--transition-timing),
     visibility 250ms var(--transition-timing);
 
+
     &.is-hidden {
       visibility: hidden;
       opacity: 0;
       pointer-events: none;
     }
   }
-  
+    .many{
+      width: 100%;
+    }
   .buy-modal {
     position: absolute;
     top: 50%;
@@ -28,8 +31,7 @@
     padding: 20px;
     width: 95vw;
     min-height: 609px;
-    background: linear-gradient(180deg, rgba(248, 137, 101, 0.9) 0%, #F57FA2 0.01%, #FDABE1 100%, #FDABE1 100%);
-    // background-color: var(--bgc-modal-color);
+    background-color: var(--bgc-products_first-color);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: transform 250ms var(--transition-timing);
 
@@ -64,9 +66,8 @@
     background-color: transparent;
     cursor: pointer;
     padding: 13px;
-    border-radius: 50%;
-    border: 1px solid var(--red-text-color);
-   
+    border: none;
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,20 +75,30 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover, &:focus {
-      background-color: var(--bgc-products_first-color);
         cursor: pointer;
     }
   }
+
+    .buy-modal__close-icon {
+   color: var(--red-text-color);
+  
+      &:hover,
+      &:focus {
+        color: var(--bgc_second-btn-color);
+        cursor: pointer;
+      }
+    }
   
   .buy-modal__title {
+    font-family: var(--font-main);
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.12;
     letter-spacing: 0.03em; 
-    color: var(--white-text-color);
-    padding-top: 40px;
+    color: var(--red-text-color);
     text-align: center;
-    margin-bottom: 40px;
+    // padding-top: 40px;
+    // margin-bottom: 40px;
   }
   
   .buy-modal__list {
@@ -112,102 +123,7 @@
     }
   }
   
-  // checkbox
-  input[type='checkbox'] {
-    &:checked {
-      + label.checkbox {
-        .checkbox__inside {
-          .check__ball {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-            transition-delay: 150ms;
-          }
-        }
-      }
-    }
-  }
-  .checkbox__img {
-    width: 100%;
-  }
-
-  .checkbox__sub-label {
-    @media screen and (max-width: 479px) {
-      white-space: pre-line;
-    }
-    text-align: center;
-    color: var(--white-text-color);
-    font-style: 18px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-  }
-  
-  .checkbox {
-    --size: 40px;
-    @media screen and (max-width: 479px) {
-      --size: 35px;
-    }
-
-    margin-bottom: 10px;
-    display: block;
-    width: var(--size);
-    height: var(--size);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: rgb(243, 229, 229);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-  
-    .checkbox__inside {
-      position: relative;
-      width: calc(var(--size) / 1.75);
-      height: calc(var(--size) / 1.75);
-      border-radius: 50%;
-      background: rgb(199, 194, 194);
-      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 3px 3px rgba(0, 0, 0, 0.2);
-  
-      .check__ball {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: transform 250ms var(--transition-timing),
-        opacity 300ms var(--transition-timing);
-        transition-delay: 120ms;
-  
-        &::after {
-          content: '';
-          position: absolute;
-          left: 50%;
-          top: 25%;
-          transform: translate(-50%, -50%);
-          background: var(--white-text-color);
-          width: 35%;
-          height: 15%;
-          filter: blur(4px);
-        }
-      }
-    }
-  }
-  
-  .check__ball--pink {
-    background: var(--bgc-products_first-color);
-  }
-  
-  .check__ball--orange {
-    background: var(--bgc-products_second-color);
-  }
-  
-  .check__ball--green {
-    background: var(--bgc-products_third-color);
-  }
+ 
   
   .modal-form__label,
   .modal-form__text,
@@ -221,6 +137,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto 10px;
+    
     @media screen and (min-width: 480px) {
       width: 350px;
     }
@@ -232,12 +149,11 @@
   
   .modal-form__text {
     display: inline-block;
-    margin-bottom: 10px;
     font-style: 16px;
     font-weight: 400;
     line-height: 1.12;
     letter-spacing: normal;
-    color: var (--white-text-color);
+    color: var(--red-text-color);
   }
   
   .modal-form__input {
@@ -245,10 +161,9 @@
     width: 100%;
     height: 44px;
     padding: 0 16px 0 42px;
-    border-radius: 22px;
-    border: 1px solid var(--black-text-color);
+    border-radius: 10px;
     background-color: var(--white-text-color);
-    
+        border: 1px solid var(--black-text-color);
     font-style: 16px;
     font-weight: 400;
     line-height: 1.12;
@@ -259,19 +174,7 @@
       outline: none;
     }
   }
-  
-  .modal-form__icon {
-    position: absolute;
-    left: 16px;
-    bottom: 14px;
-    fill: var(--black-text-color);
-    transition: fill 250ms var(--transition-timing);
-    .modal-form__input:focus + &,
-    .modal-form__input:hover + & {
-      fill: var(--red-text-color);
-      
-    }
-  }
+
   
   .modal-form__input {
       &:hover, &:focus {
@@ -283,6 +186,41 @@
       }
   }
 
+// comment
+
+
+
+.contact-form-comment {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 0 16px 0 42px;
+  font-weight: 400;
+  color: #2e2f4266;
+  line-height: 1.12;
+  letter-spacing: 0.04em;
+ border-radius: 10px;
+border: 1px solid var(--black-text-color);
+ background-color: var(--white-text-color);
+  outline: transparent;
+  transition: border 250ms var(--transition-timing);
+
+
+display: block;
+  position: relative;
+
+  margin: 0 auto 10px;
+
+  @media screen and (min-width: 480px) {
+    width: 350px;
+  }
+      &:focus {
+          border: 1px solid var(--red-text-color);
+          outline: none;
+}
+}
+
+  // send button
   .send-btn {
     font-family: 'DM Sans', sans-serif;
     font-size: large;
@@ -302,7 +240,7 @@
     align-items: center;
     border-radius: 50px;
     border: 1px solid var(--red-text-color);
-    background-color: var(--bgc-products_first-color);
+    background-color: var(--bgc-first_section-color);
     transition-duration: 400ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
