@@ -47,6 +47,9 @@
     text-transform: uppercase;
 
     color: var(--cream-text-color);
+    &:hover {
+        animation: scale-down-top 2s cubic-bezier(.25, .46, .45, .94) both;
+      }
 
     @include mq(tablet) {
       margin-bottom: 16px;
@@ -72,6 +75,20 @@
     text-transform: uppercase;
 
     color: var(--red-text-color);
+&:hover{
+  animation: scale-down-top 2s cubic-bezier(.25, .46, .45, .94) both;  
+}
+@keyframes scale-down-top {
+  0% {
+    transform: scale(1);
+    transform-origin: 50% 0
+  }
+
+  100% {
+    transform: scale(.5);
+    transform-origin: 50% 0
+  }
+}
 
     @include mq(tablet) {
       margin-bottom: 40px;
@@ -99,6 +116,7 @@
 }
 
 .about-wrap__flex {
+
   @include mq(tablet) {
     width: 336px;
     height: 335px;
@@ -113,7 +131,7 @@
   &__img {
     margin-right: auto;
     margin-left: auto;
-
+  
     @include mq(tablet) {
       position: fixed;
       top: 0;
@@ -130,6 +148,12 @@
     }
   }
 }
+.about-wrap__flex:hover,
+.about-wrap__flex:focus {
+animation: rotate-90-top-cw 2s cubic-bezier(.25, .46, .45, .94) infinite both;
+
+}
+@keyframes rotate-90-top-cw{0%{transform:rotate(0);transform-origin:top}100%{transform:rotate(45deg);transform-origin:top}}
 
 .about-wrap-content {
   max-width: 220px;
@@ -146,6 +170,9 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.6;
+    &:hover{
+transform: scale(1.1);
+}
 
     color: var(--black-text-color);
 
@@ -166,6 +193,9 @@
     font-size: 12px;
     line-height: 1.6;
     color: var(--grey-text-color);
+  &:hover {
+      transform: scale(1.1);
+    }
 
     @include mq(tablet) {
       margin-bottom: 30px;
@@ -182,28 +212,6 @@
     }
   }
 
-  &__paragraph {
-    width: 100%;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.6;
-    color: var(--grey-text-color);
-
-    @include mq(tablet) {
-      margin-bottom: 40px;
-      font-size: 14px;
-      line-height: 1.79;
-      letter-spacing: 0.04em;
-    }
-
-    @include mq(desktop) {
-      margin-bottom: 40px;
-      font-size: 14px;
-      line-height: 1.92;
-      letter-spacing: 0.04em;
-    }
-  }
 
   &__btn {
     position: relative;
@@ -224,6 +232,7 @@
     padding: 0 37px;
     cursor: pointer;
 
+
     @include mq(tablet) {
       font-size: 16px;
       line-height: 1.31;
@@ -242,9 +251,14 @@
     :focus {
       background-color: var(--red-text-color);
       color: var(--white-text-color);
+      transform: scale(1.2);
+     
     }
   }
 }
+
+
+      
 
 .about-wrap__btn-icon {
   width: 8px;
@@ -257,8 +271,11 @@
 
   .about-wrap-content__btn:hover &,
   .about-wrap-content__btn:focus & {
+          
     transform: translateY(-20px);
     opacity: 0;
+
+          
   }
 }
 

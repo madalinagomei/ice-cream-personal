@@ -1,14 +1,14 @@
-@keyframes appear {
+@keyframes rotate-center {
     0% {
-      transform: scale(80%);
-      opacity: 0.9;
-    }
-    100% {
-      transform: scale(100%);
-      opacity: 1;
-    }
+        transform: rotate(0)
     }
 
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+        
 .advantages {
     padding-top: 106px;
     padding-bottom: 60px;
@@ -117,8 +117,7 @@
     height: 50px;
     background-image: url('../images/advantages/adv-1.png');
 
-    animation: appear 5s linear infinite;
-    animation-direction: alternate;
+animation: rotate-center 3s ease-in-out infinite both;
     
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -180,8 +179,7 @@
     height: 50px;
     background-image: url('../images/advantages/adv-2.png');
 
-    animation: appear 5s linear infinite;
-    animation-direction: alternate;
+animation: rotate-center 3s ease-in-out infinite both;
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -242,8 +240,7 @@
     height: 50px;
     background-image: url('../images/advantages/adv-3.png');
 
-    animation: appear 5s linear infinite;
-    animation-direction: alternate;
+animation: rotate-center 3s ease-in-out infinite both;
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -293,3 +290,22 @@
         justify-content: left;
     }
 }
+
+.advantages__item:hover{
+    cursor: pointer;
+animation: rotate-scale-down 1s linear both;
+    } 
+    
+    @keyframes rotate-scale-down {
+            0% {
+                transform: scale(1) rotateZ(0)
+            }
+    
+            50% {
+                transform: scale(.5) rotateZ(180deg)
+            }
+    
+            100% {
+                transform: scale(1) rotateZ(360deg)
+            }
+        }
