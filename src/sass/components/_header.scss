@@ -27,7 +27,7 @@
 
 
  .manu-icon{
-        background-color: rgba(0,0,0,0);
+   background-color: rgba(163, 14, 14, 0);
         border: none;
         margin-left: auto;
         transition-property: color;
@@ -35,6 +35,8 @@
         transition-timing-function: cubic-bezier(.4,0,.2,1);
         margin-left: 61px;
         padding: 0;
+            cursor: pointer;
+
         @include mq(tablet) {
           margin-left: 0;
       }
@@ -47,7 +49,7 @@
   .header__logo{
 padding-left: 0;
 cursor: pointer;
-// scale: 1.1;
+scale: 1.1;
 &:hover {
     scale: 1.2;
   }

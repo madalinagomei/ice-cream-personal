@@ -15,7 +15,7 @@
 })();    
 
 
-// Модалка на кнопку в секції HERO 
+// HERO 
 
 (() => {
   const refs = {
@@ -33,18 +33,6 @@
 })();
 
 
-
-// Закрыть видео с потерей звука
-// $('body').on('click','.js-trailer',function(){
-//   $("#trailer-box").dialog({
-//     modal: false,
-//     show: 'fade',
-//     hide: 'fade',
-//     width: 800,
-//     close: function(event) {$('.dleplyrplayer video').trigger('pause'); }
-//   });	
-//   return false;
-// });
 
 (() => {
   const refs = {
@@ -96,7 +84,7 @@
   }
 })();     
 
-// Модалка на buy now в десктопній версії
+//buy desktop
 
 (() => {
   const refs = {
@@ -113,7 +101,7 @@
   }
 })();
 
-// Модалка на кнопці Franchise
+// Мodal Franchise
 
 (() => {
   const refs = {
@@ -132,7 +120,7 @@
 })();
 
 
-// Модалка на кнопці Our locations
+// Мodal Our locations
 (() => {
   const refs = {
     openModalBtn: document.querySelector("[data-modal-open-loc]"),
@@ -151,7 +139,7 @@
 
 
 
-// Модалка на buy now в таблетці та моб версії
+// Buy tablet mobile
 
 (() => {
   const refs = {

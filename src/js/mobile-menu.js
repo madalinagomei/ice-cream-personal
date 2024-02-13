@@ -1,4 +1,4 @@
-// Меню бургер
+// Meniu de burgeri
 
 const iconMenu = document.querySelector('.manu-icon');
 const menuBody = document.querySelector('.header__nav-container');
@@ -21,7 +21,7 @@ if (iconClose) {
   });
 }
 
-// Плавный скрол моб. меню //
+// Def meniu //
 
 const menuLinks = document.querySelectorAll('.header__nav-link[data-goto]');
 if (menuLinks.length > 0) {
@@ -55,7 +55,7 @@ if (menuLinks.length > 0) {
   }
 }
 
-// Плавный скрол навигация //
+// Navigation with ease in line//
 
 const menuNav = document.querySelectorAll(
   '.header__nav-link-desktop[data-goto]'
