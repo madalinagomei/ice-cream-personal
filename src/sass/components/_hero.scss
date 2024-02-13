@@ -2,7 +2,6 @@
 // bubble  effect
 
 
-
 $bubble-count: 50;
 $sway-type: "sway-left-to-right", "sway-right-to-left";
 
@@ -18,7 +17,8 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 .bubbles {
   position: relative;
   width: 100%;
-  // height: 100vh;
+
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -57,6 +57,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   }
 }
 
+
 @keyframes float-up {
   to {
     transform: translateY(-175vh);
@@ -82,7 +83,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     transform: translateX(-100%);
   }
 }
-
+      
 // end bubble
 
 
