@@ -30,6 +30,7 @@
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+  
 }
 .hero__button-list {
   display: flex;
@@ -129,11 +130,18 @@
       height: 26px;
       left: 229px;
       bottom: 180px;
+      &:hover  {
+          
+          scale: 1.1;
+      
+        }
     }
     &:hover,
     &:focus {
       fill:  var(--white-text-color);
       background-color: var(--bgc_second-btn-color);
+          scale: 1.1;
+        
 
     }
   }

@@ -79,13 +79,25 @@
     background: var(--bgc_first-btn-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    &:focus,
+        &:hover {
+            scale: 1.1;
+        }
     @media screen and (min-width: 768px) {
         max-width: 224px;
+        &:focus,
+            &:hover {
+                scale: 1.1;
+            }
     }
     @media screen and (min-width: 1200px) {
         min-width: 368px;
         padding-left: 40px;
         padding-right: 40px;
+        &:focus, 
+        &:hover {
+                scale: 1.1;
+            }
     }
 }
 .contacts__top-text {
@@ -181,13 +193,23 @@
     font-size: 16px;
     line-height: 1.31;
     align-items: center;
+    &:focus,
+        &:hover {
+            scale: 1.1;
+        }
     @media screen and (min-width: 768px) {
         width: 174px;
-    }
+    &:focus,
+        &:hover {
+            scale: 1.1;
+        }
+            }
+    
     @media screen and (min-width: 1200px) {
         width: 168px;
     }
 }
+
 .contacts__button--red {
     background-color: var(--red-text-color);
     color: var(--white-text-color);

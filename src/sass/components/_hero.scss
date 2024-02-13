@@ -93,16 +93,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   @include mq(mobile-only) {
     background-image: url('../images/hero/ellipse-tablet.svg');
     background-repeat: no-repeat;
-    @keyframes bgh {
-      0% {
-        background-image: url('../images/hero/ellipse-tablet.svg');
-        background-position: top -153px left 36px;
-      }
-      100% {
-        background-image: url('../images/hero/ellipse-tablet.svg');
-        background-position: top 83px left 36px;
-      }
-    }
+    
   }
 
 
@@ -116,16 +107,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
     background-position: top 92px left 117px;
     background-repeat: no-repeat;
-    @keyframes bgm {
-      0% {
-        background-image: url('../images/hero/icecrem.svg');
-        background-position: top 292px left 117px;
-      }
-      100% {
-        background-image: url('../images/hero/icecrem.svg');
-        background-position: top 92px left 117px;
-      }
-    }
+    
 
     @include mq(tablet-only) {
       position: relative;
@@ -139,25 +121,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
       background-repeat: no-repeat;
       background-position: bottom left -300px, bottom 16px left 32px,
         bottom 1px right 32px, left 248px bottom 40px;
-      @keyframes bgt {
-        0% {
-          background-image: url('../images/hero/ice-cream-tablet.svg'),
-            url('../images/hero/slider-pic-tablet.svg'),
-            url('../images/hero/slider-pic-tablet1.svg'),
-            url('../images/hero/ellipse-tablet.svg');
-          background-position: bottom left -170px, bottom 416px left 32px,
-            bottom 1px right -800px, left 248px bottom -440px;
-        }
-
-        100% {
-          background-image: url('../images/hero/ice-cream-tablet.svg'),
-            url('../images/hero/slider-pic-tablet.svg'),
-            url('../images/hero/slider-pic-tablet1.svg'),
-            url('../images/hero/ellipse-tablet.svg');
-          background-position: bottom left 322px, bottom 16px left 32px,
-            bottom 1px right 32px, left 248px bottom 40px;
-        }
-      }
+      
     }
 
     @include mq(desktop) {
@@ -172,25 +136,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
       background-repeat: no-repeat;
       background-position: right 328px bottom 0px, bottom 60px left 16px,
         bottom 1px right 16px, right 149px bottom 76px;
-      @keyframes bgd {
-        0% {
-          background-image: url('../images/hero/ice-cream-desktop.svg'),
-            url('../images/hero/slider-desktop.svg'),
-            url('../images/hero/slider-1-desktop.svg'),
-            url('../images/hero/ellipse-desktop.svg');
-          background-position: right 328px bottom 600px, bottom 60px left 1600px,
-            bottom -400px right 16px, right 1490px bottom 76px;
-        }
-
-        100% {
-          background-image: url('../images/hero/ice-cream-desktop.svg'),
-            url('../images/hero/slider-desktop.svg'),
-            url('../images/hero/slider-1-desktop.svg'),
-            url('../images/hero/ellipse-desktop.svg');
-          background-position: right 328px bottom 0px, bottom 60px left 16px,
-            bottom 1px right 16px, right 149px bottom 76px;
-        }
-      }
+      
     }
   }
 
@@ -205,12 +151,18 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 20px;
+    &:hover {
+        scale: 1.1;
+      }
 
     @include mq(tablet-only) {
       width: 162px;
       height: 80px;
       font-size: 22px;
       line-height: calc(25 / 22);
+      &:hover {
+          scale: 1.1;
+        }
     }
     @include mq(desktop) {
       width: 277px;
@@ -218,6 +170,9 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
       font-size: 38px;
       line-height: calc(44 / 38);
       margin-bottom: 24px;
+      &:hover {
+          scale: 1.1;
+        }
     }
   }
   .hero__title-word {
@@ -271,6 +226,9 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
       color: white;
       font-family: 'DM Sans', 'Sans-serif';
       font-weight: 400;
+      &:hover {
+          scale: 1.1;
+        }
       @include mq(mobile-only) {
         display: none;
       }
@@ -281,6 +239,9 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
         left: 184px;
         bottom: 81px;
         margin-bottom: 7px;
+        &:hover {
+            scale: 1.1;
+          }
       }
       @include mq(desktop) {
         max-width: 200px;
@@ -399,14 +360,6 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
   }
 
-  @keyframes animate {
-    from {
-      background-position: 0;
-    }
-
-    to {
-      background-position: 0 450px;
-    }
-  }
+  
 }
 

@@ -214,17 +214,7 @@
       </svg>
     </button>
     <form action="#" class="location-form">
-      <p class="location-form__title">--Our location--</p>
-      <iframe
-        class="local"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5082.228854492167!2d30.520296757170627!3d50.438969246118994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc9e2591553d0f42!2sGulliver%20Tower%20B!5e0!3m2!1sru!2sua!4v1658089443200!5m2!1sru!2sua"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <iframe class="local" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842614.0227688975!2d22.380532894500035!3d45.91150462816498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff26958976c3%3A0x84ef4f92a804b194!2zUm9tw6JuaWE!5e0!3m2!1sro!2sde!4v1707776035471!5m2!1sro!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </form>
   </div>
 </div>
@@ -232,6 +222,7 @@
 <!--FRANCHISE-->
 <div class="contacts-franchise backdrop is-hidden" data-modal-fr>
   <div class="franchise-modal">
+    <h2 class="franchise-form__title ">Leave your details and maybe we<br> will call you back</h2>
     <button
       type="button"
       class="contacts-franchise-close contacts-franchise-modal-close"
@@ -243,82 +234,55 @@
     </button>
 
     <form action="#" class="franchise-form">
-      <p class="franchise-form__title">
-        A franchise usually lasts for a fixed time period (broken down into
-        shorter periods, which each require renewal), and serves a specific
-        territory or geographical area surrounding its location. One franchisee
-        may manage several such locations. Agreements typically last from five
-        to thirty years, with premature cancellations or terminations of most
-        contracts bearing serious consequences for franchisees. A franchise is
-        merely a temporary business investment involving renting or leasing an
-        opportunity, not the purchase of a business for the purpose of
-        ownership. It is classified as a wasting asset due to the finite term of
-        the license.
-      </p>
+   
 
       <div class="franchise-form-field">
-        <label for="name" class="franchise-form-field__lable">Name</label>
-        <div class="franchise-form-field__align-icon">
-          <input
-            type="text"
-            class="franchise-form-field__input"
-            name="name"
-            id="name"
-          />
-          <svg class="franchise-form-field__icon" width="18px" height="18px">
-            <use href="./images/modal-windows/header.svg#icon-person"></use>
-          </svg>
-        </div>
-      </div>
-
-      <div class="franchise-form-field">
-        <label for="tel" class="franchise-form-field__lable"
-          >Phone number</label
-        >
-        <div class="franchise-form-field__align-icon">
-          <input
-            type="tel"
-            class="franchise-form-field__input"
-            name="tel"
-            id="tel"
-          />
-          <svg class="franchise-form-field__icon" width="18px" height="18px">
-            <use href="./images/modal-windows/header.svg#icon-phone"></use>
-          </svg>
-        </div>
-      </div>
-      <div class="franchise-form-field">
-        <label for="email" class="franchise-form-field__lable">E-mail</label>
-        <div class="franchise-form-field__align-icon">
-          <input
-            type="email"
-            class="franchise-form-field__input"
-            name="email"
-            id="email"
-          />
-          <svg class="franchise-form-field__icon" width="18px" height="18px">
-            <use href="./images/modal-windows/header.svg#email-form"></use>
-          </svg>
-        </div>
-      </div>
-
-      <label class="franchise-checkbox">
-        <input
-          class="franchise-checkbox__input visually-hidden"
-          type="checkbox"
-          name="agree"
-          value="agree"
-        />
-
-        <span class="franchise-checkbox__icon"> </span>
-        <span class="franchise-checkbox__text"
-          >I accept the terms of the agreement</span
-        >
+        <label class="modal-form__label modal-form__label--top">
+        <span class="modal-form__text">Name</span>
+        <input type="text" name="user-name" class="modal-form__input" />
       </label>
-      <button type="submit" class="franchise-form__button">SEND</button>
+
+      <!-- telefon -->
+      <label class="modal-form__label">
+        <span class="modal-form__text">Phone</span>
+        <input
+          type="tel"
+          name="user-phone"
+          class="modal-form__input"
+          required
+        />
+      </label>
+<!-- email -->
+      <label class="modal-form__label">
+        <span class="modal-form__text">Mail</span>
+        <input
+          type="email"
+          name="user-email"
+          id="user-email"
+          class="modal-form__input"
+          required
+        />
+      </label>
+<!-- comment -->
+      <div class="comment-container modal-form__label">
+        <label for="user-comment" class="modal-form__text">a few words, my darling</label>
+        <textarea
+          name="user-comment"
+          id="user-comment"
+          class="contact-form-comment"
+          placeholder="Write here..."
+        ></textarea>
+      </div>
+<!-- button i want -->
+      <button class="first-btn send-btn" type="submit">
+        <span class="first-btn__start">SEND</span>
+      </button>
     </form>
   </div>
 </div>
+
+
+
 
 <!--Modal-hero-->
 

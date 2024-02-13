@@ -44,7 +44,15 @@
       }
   }
 
-  
+  .header__logo{
+padding-left: 0;
+cursor: pointer;
+// scale: 1.1;
+&:hover {
+    scale: 1.2;
+  }
+  }
+
     .header__nav-item{
         font-style: "DM Sans","Sans-serif";
         border: 1px solid #e18298;
