@@ -22,6 +22,7 @@
         font-family: var(--font-main);
         font-weight: 400;
         text-transform: uppercase;
+        display: inline;
         @include mq(mobile-only) {
             font-size: 18px;
             line-height: 1.16;
@@ -46,6 +47,45 @@
         margin-left: 0;
         
     }
+.footer__text-animation {
+    font-family: var(--font-main);
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline;
+    transition:transform 0.8s ease-in-out ;
+
+    @include mq(mobile-only) {
+        font-size: 18px;
+        line-height: 1.16;
+
+        max-width: 232px;
+    }
+
+    @include mq(tablet-only) {
+        font-size: 26px;
+        line-height: 1.15;
+        letter-spacing: 0.04em;
+
+        max-width: 340px;
+    }
+
+    @include mq(desktop) {
+        font-size: 30px;
+        line-height: 1.13;
+        letter-spacing: 0.04em;
+    }
+
+    color: var(--cream-text-color);
+    margin-left: 0;
+
+}
+
+.footer__text-animation:hover,
+.footer__text-animation:focus{
+    cursor:pointer;
+   transform: translate(-40px 40px);
+}
+
     &__accent-text {
         font-family: var(--font-main);
             font-weight: 400;
