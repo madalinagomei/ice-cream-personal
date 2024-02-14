@@ -83,35 +83,27 @@ cursor:pointer;
   flex-direction: column;
   border-radius: 24px;
   padding: 160px 39px 40px 41px;
+  
 
   @include mq(mobile-only) {
     &:not(:last-child) {
       margin-bottom: 140px;
-      &:hover {
-          transform: scale(1.1);
-          cursor: pointer;
-          box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
-        }
     }
   }
   @include mq(tablet) {
     padding: 118px 32px 40px 32px;
     flex-basis: calc((100% - 32px) / 3);
-    &:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-        box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
-      }
+   
   }
   @include mq(desktop) {
     padding: 165px 63px 60px 64px;
     flex-basis: calc((100% - 64px) / 3);
-    &:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-        box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
-      }
   }
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      box-shadow: 5px 10px 5px rgba(46, 47, 66, 0.08);
+    }
 }
 .products-card__item--icecream {
   background-color: var(--bgc-products_first-color);
@@ -266,5 +258,31 @@ cursor:pointer;
   .products-btn:hover &,
   .products-btn:focus & {
     fill: var(--white-text-color);
+        -webkit-animation: rotate-90-ccw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: rotate-90-ccw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      
+  }
+}
+@-webkit-keyframes rotate-90-ccw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes rotate-90-ccw {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
 }
