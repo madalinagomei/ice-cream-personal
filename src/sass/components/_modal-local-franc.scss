@@ -79,7 +79,20 @@
         cursor: pointer;
       }
     }
+
+  .location-map__close-icon {
   
+    stroke: var(--red-text-color);
+    stroke-width: 13;
+  
+    &:hover,
+    &:focus {
+      stroke: #a40d33;
+      cursor: pointer;
+      scale: 1.12;
+  
+    }
+  }
   
 
 
