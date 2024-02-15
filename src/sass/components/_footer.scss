@@ -51,8 +51,9 @@
     font-family: var(--font-main);
     font-weight: 400;
     text-transform: uppercase;
-    display: inline;
-    transition:transform 0.8s ease-in-out ;
+    display: inline-block;
+transition: transform 0.8s ease-in-out;
+    /* Smooth transition */
 
     @include mq(mobile-only) {
         font-size: 18px;
@@ -80,10 +81,17 @@
 
 }
 
-.footer__text-animation:hover,
-.footer__text-animation:focus{
-    cursor:pointer;
-   transform: translate(-40px 40px);
+// footer animation
+
+.footer__text-animation:hover {
+    transform: translate(-160px, 40px);
+    color: var(--red-text-color);
+    /* Diagonal movement */
+}
+
+.footer__text-animation:hover~.footer__accent-text {
+    transition: transform 0.8s ease-in-out;
+    transform: translateY(20px);
 }
 
     &__accent-text {
