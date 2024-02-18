@@ -211,8 +211,8 @@
 }
 
 .contacts__button--red {
-    background-color: var(--red-text-color);
-    color: var(--white-text-color);
+    background-color: var(--white-text-color);
+    color: var(--red-text-color);
     margin-bottom: 10px;
     width: 161px;
     transition: background-color var(--transition-duration) var(--transition-timing);
@@ -226,8 +226,8 @@
     }
 }
 .contacts__button--red:hover, .contacts__button--red:focus {
-    background-color: var(--bgc_first-btn-color);
-    color: var(--red-text-color);
+    background-color: var(--red-text-color);
+    color: var(--white-text-color);
     .contacts__button-icon--red {
         opacity: 1;
     }
